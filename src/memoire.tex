@@ -1,0 +1,59 @@
+\documentclass[12pt,a4wide]{report}
+
+\def\TitreMemoire{Titre du mémoire}
+\def\AuteurMemoire{Prénom Nom}
+\def\VersionMemoire{0.1}
+\def\DateMemoire{\today}
+
+\usepackage[francais]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+citecolor=blue,
+filecolor=blue,
+urlcolor=blue
+}
+%\usepackage{fontspec}
+%\setmainfont[Ligatures=TeX]{Linux Libertine O}
+\usepackage{libertine}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+\vspace{2cm}
+\hrule
+\vspace{.5cm}
+{\Huge\textbf{\TitreMemoire}}\\
+\vspace{.5cm}
+\hrule
+\vspace{1cm}
+{\Large \AuteurMemoire}\\
+\vfill
+{version \VersionMemoire -- \DateMemoire}
+\vspace{2cm}
+\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+
+\chapter{Introduction}
+\input{introduction}
+
+\chapter{Problématique}
+\input{problematique}
+
+\chapter{\'Etat de l'art}
+\input{etatdelart}
+
+\chapter{Proposition}
+\input{proposition}
+
+\chapter{Conclusion}
+\input{conclusion}
+
+\end{document}
